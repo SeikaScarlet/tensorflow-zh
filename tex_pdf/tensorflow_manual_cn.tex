@@ -3,13 +3,18 @@
 % SEIKA 2015
 
 %\documentclass[a4paper,11pt,twoside]{book}
-\documentclass[a4paper,11pt,twoside]{ctexbook}
+\documentclass[b5paper,10pt,twoside]{ctexbook}
 
 \usepackage{makeidx}
 \makeindex
 
-\usepackage{geometry}
-\geometry{left=3.5cm, right=3cm, top=3cm, bottom=3cm}
+% \usepackage{geometry}
+% \geometry{left=3.5cm, right=3cm, top=3cm, bottom=3cm}
+
+\usepackage[width=5.2 in,height=8in,
+  hmarginratio=3:2,vmarginratio=1:1]{geometry}
+
+
 %控制页眉页脚页码
 \pagestyle{headings}
 %罗马字符页码
@@ -25,11 +30,11 @@
 \usepackage{courier}
 % \usepackage{fontspec}
 
-\newfontfamily\CodeFont{Consolas}
-% \newfontfamily\CodeFont{Ubuntu Mono}
+% \newfontfamily\CodeFont{Consolas}
+\newfontfamily\CodeFont{Ubuntu Mono}
 % \newfontfamily\CodeFont{Menlo}
 % \newfontfamily\CodeFont{Lucida Console}
-% \setmonofont{Lucida Console}
+
 
 \usepackage{graphicx}
 % 支持插入eps图形文件
@@ -40,9 +45,8 @@
 \definecolor{mygreen}{rgb}{0,0.6,0}
 \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 \definecolor{mymauve}{rgb}{0.58,0,0.82}
-\definecolor{codeback}{rgb}{0.8,0.87,0.95}
-\definecolor{etc}{rgb}{0.24,0.07,0.18}
-\definecolor{etc}{rgb}{0.54,0.37,0.48}
+\definecolor{codeback}{rgb}{0.94,0.98,0.99}
+\definecolor{etc}{rgb}{0.7,0.66,0.61}
 
 \usepackage{amsmath}
 
@@ -52,7 +56,7 @@
 \usepackage{listings}
 \lstset{ %
   backgroundcolor=\color{codeback},    % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\linespread{0.95}\footnotesize\CodeFont,   % the size of the fonts that are used for the code
+  basicstyle=\linespread{0.95}\scriptsize\CodeFont,   % the size of the fonts that are used for the code
   breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
   breaklines=true,                   % sets automatic line breaking
   captionpos=bl,                     % sets the caption-position to bottom
@@ -61,13 +65,13 @@
   escapeinside={\%*}{*)},            % if you want to add LaTeX within your code
   extendedchars=true,                % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
   frame=single,                      % adds a frame around the code
-  frameround=tttt,
+  frameround=ftft,
   keepspaces=true,                   % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
   keywordstyle=\color{blue},         % keyword style
   language=Python,                   % the language of the code
   morekeywords={*,...},              % if you want to add more keywords to the set
   numbers=left,                      % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=4pt,                     % how far the line-numbers are from the code
+  numbersep=5pt,                     % how far the line-numbers are from the code
   numberstyle=\tiny\CodeFont\color{mygray},   % the style that is used for the line-numbers
   rulecolor=\color{mygray},          % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
   showspaces=false,                  % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
@@ -77,10 +81,14 @@
   stringstyle=\color{orange},        % string literal style
   tabsize=2,                         % sets default tabsize to 2 spaces
   %title=myPython.py                 % show the filename of files included with \lstinputlisting; also try caption instead of title
-  xleftmargin = 2em,
-  xrightmargin = 2em,
-  aboveskip = 0.5 em
+  xleftmargin = 4em,
+  xrightmargin = 1.5em,
+  aboveskip = 1 em
 }
+
+\newcommand{\li}{\lstinline}
+\newcommand{\tc}{\textcolor}
+\newcommand{\cet}{\textcolor{etc}}
 
 % \setCJKmainfont[BoldFont={SimSun},ItalicFont={KaiTi}] %{SimSun}
 
@@ -134,24 +142,24 @@
 \include{how_tos/c3s08_new_data_formats}
 \include{how_tos/c3s09_using_gpu}
 
-🍁 % English parts
+%🍁% English parts
 \newpage
 % Chapter 4 API (Python)
 \chapter{Python API}
-\include{api/c4s00}
-\include{api/python/c4s01_framework}
-\include{api/python/c4s02_constant_op}
-\include{api/python/c4s03_state_ops}
-\include{api/python/c4s04_array_ops}
-\include{api/python/c4s05_math_ops}
-\include{api/python/c4s06_control_flow_ops}
-\include{api/python/c4s07_image}
-\include{api/python/c4s08_sparse_ops}
-\include{api/python/c4s09_io_ops}
-\include{api/python/c4s10_python_io}
-\include{api/python/c4s11_nn}
-\include{api/python/c4s12_client}
-\include{api/python/c4s13_train}
+% \include{api/c4s00}
+% \include{api/python/c4s01_framework}
+% \include{api/python/c4s02_constant_op}
+% \include{api/python/c4s03_state_ops}
+% \include{api/python/c4s04_array_ops}
+% \include{api/python/c4s05_math_ops}
+% \include{api/python/c4s06_control_flow_ops}
+% \include{api/python/c4s07_image}
+% \include{api/python/c4s08_sparse_ops}
+% \include{api/python/c4s09_io_ops}
+% \include{api/python/c4s10_python_io}
+% \include{api/python/c4s11_nn}
+% \include{api/python/c4s12_client}
+% \include{api/python/c4s13_train}
 
 \newpage
 % Chapter 5 API (C++)

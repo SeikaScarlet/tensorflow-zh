@@ -1,9 +1,13 @@
-\indexentry{graph|hyperpage}{27}
-\indexentry{session|hyperpage}{27}
-\indexentry{tensor|hyperpage}{27}
-\indexentry{variable|hyperpage}{27}
-\indexentry{MNIST 数据集|hyperpage}{39}
-\indexentry{Softmax regression|hyperpage}{42}
-\indexentry{梯度下降法|hyperpage}{49}
-\indexentry{Softmax regression|hyperpage}{54}
+\indexentry{Anaconda|hyperpage}{16}
+\indexentry{conda|hyperpage}{16}
+\indexentry{graph|hyperpage}{26}
+\indexentry{session|hyperpage}{26}
+\indexentry{tensor|hyperpage}{26}
+\indexentry{variable|hyperpage}{26}
+\indexentry{MNIST 数据集|hyperpage}{37}
+\indexentry{Softmax regression|hyperpage}{41}
+\indexentry{占位符|hyperpage}{45}
+\indexentry{placeholder|hyperpage}{45}
+\indexentry{梯度下降法|hyperpage}{48}
+\indexentry{Softmax regression|hyperpage}{53}
 \indexentry{卷积神经网络|hyperpage}{57}

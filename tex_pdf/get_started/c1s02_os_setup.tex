@@ -159,7 +159,7 @@ $ sudo easy_install pip
 $ sudo pip install --upgrade virtualenv
 \end{lstlisting}
 
-Ⓔ \textcolo{etc}{Create a Virtualenv environment in the directory} \lstinline{~/tensorflow}:
+Ⓔ \textcolor{etc}{Create a Virtualenv environment in the directory} \lstinline{~/tensorflow}:
 
 Ⓒ 在\lstinline{~/tensorflow}路径下建立一个 Virtualenv 环境：
 
@@ -230,9 +230,79 @@ $ source ~/tensorflow/bin/activate.csh  # If using csh.
 (tensorflow)$ deactivate
 \end{lstlisting}
 
+
+%% Add Anaconda installation
+
+\subsection {Anaconda installation}
+
+\href{https://www.continuum.io/why-anaconda}{Anaconda} is a Python distribution that includes a large number of standard numeric and scientific computing packages. Anaconda uses a package manager called \href{http://conda.pydata.org/}{``conda''} that has its own \href{http://conda.pydata.org/docs/using/envs.html}{environment system} similar to Virtualenv.
+
+\index{Anaconda}  \index{conda}
+
+As with Virtualenv, conda environments keep the dependencies required by different Python projects in separate places. The Anaconda environment installation of TensorFlow will not override pre-existing version of the Python packages needed by TensorFlow.
+
+\begin{itemize}
+
+\item Install Anaconda.
+
+\item Create a conda environment.
+
+\item Activate the conda environment and install TensorFlow in it.
+
+\item After the install you will activate the conda environment each time you want to use TensorFlow.
+
+\end{itemize}
+
+Install Anaconda:
+
+Follow the instructions on the \href{https://www.continuum.io/downloads}{Anaconda download site}
+
+Create a conda environment called \li{tensorflow}:
+
+\begin{lstlisting}
+
+# Python 2.7
+$ conda create -n tensorflow python=2.7
+
+# Python 3.4
+$ conda create -n tensorflow python=3.4
+
+# Python 3.5
+$ conda create -n tensorflow python=3.5
+
+\end{lstlisting}
+
+Activate the environment and use conda or pip to install TensorFlow inside it.
+
+\subsubsection {Using conda}
+
+A community maintained conda package is available from \href{https://github.com/conda-forge/tensorflow-feedstock}{conda-forge}.
+
+Only the CPU version of TensorFlow is available at the moment and can be installed in the conda environment for Python 2 or Python 3.
+
+\begin{lstlisting}
+$ source activate tensorflow
+(tensorflow)$  # Your prompt should change
+
+# Linux/Mac OS X, Python 2.7/3.4/3.5, CPU only:
+(tensorflow)$ conda install -c conda-forge tensorflow
+\end{lstlisting}
+
+
+\subsubsection {Using pip}
+
+
+
+\subsubsection {Usage}
+
+
+
+
 %%%%%%%%%%%%%%%%
 % Done to here %
 %%%%%%%%%%%%%%%%
+
+
 
 %
 %%
